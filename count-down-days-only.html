@@ -20,29 +20,17 @@ body{
   letter-spacing: 5px;
 }
 
-.days, .hours, .minutes, .seconds {
+.days, {
   display: inline-block;
   padding: 20px;
-  width: 100px;
+  width: 50px;
   border-radius: 5px;
 }
 
 .days {
-  background: #EF2F3C;
+  background: #84C1FF;
 }
 
-.hours {
-  background: #eeeeee;
-  color: #183059;
-}
-
-.minutes {
-  background: #276FBF;
-}
-
-.seconds {
-  background: #F0A202;
-}
 
 .numbers {
   font-family: 'Montserrat', sans-serif;
@@ -97,7 +85,7 @@ body{
 </body>
 <script>
     const year = new Date().getFullYear();
-const myDate = new Date('Oct 01, 2020 00:00:00');
+const myDate = new Date('Jul 15, 2025 ');
 console.log(myDate);
 
 // countdown
@@ -111,9 +99,6 @@ let timer = setInterval(function() {
 
   // math
   let days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-  let seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
   // display
   document.getElementById("days").innerHTML=days
